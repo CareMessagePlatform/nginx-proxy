@@ -6,6 +6,8 @@ RUN apt-get update \
  && apt-get install -y -q --no-install-recommends \
     ca-certificates \
     wget \
+ && apt-get purge nginx \
+ && apt-get install -y nginx-extras \
  && apt-get clean \
  && rm -r /var/lib/apt/lists/*
 
